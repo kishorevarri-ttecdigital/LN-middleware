@@ -1,0 +1,29 @@
+{
+    "name": "dialogflow-middleware-service",
+    "version": "0.0.1",
+    "description": "An run cloud deployed service to act as a middleware.",
+    "main": "server.js",
+    "scripts": {
+      "start": "npx functions-framework --target=app [--signature-type=http]",
+      "test": "mocha"
+    },
+    "dependencies": {
+      "@google-cloud/dialogflow-cx": "^4.9.0",
+      "dotenv": "^16.4.7",
+      "express": "^4.21.2",
+      "cors": "^2.8.5",
+      "archiver": "^7.0.1"
+    },
+    "devDependencies": {
+      "@google-cloud/functions-framework": "^3.4.5",
+      "mocha": "^11.1.0"
+    },
+    "engines": {
+      "node": "10.x"
+    },
+    "repository": {
+      "url": "insert url here"
+    },
+    "license": "Apache-2.0"
+  }
+  
