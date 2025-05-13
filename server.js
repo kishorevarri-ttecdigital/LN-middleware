@@ -34,11 +34,11 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 
 // Configure this to your project, location, agent, and session
-const projectId = process.env.REACT_APP_DF_PROJECT_ID
-const location = process.env.REACT_APP_DF_LOCATION
-const agentId = process.env.REACT_APP_DF_AGENT_ID
+const projectId = "insightsteamsandbox"
+const location = "global"
+const agentId = "38334587-57b9-47e1-b178-87f28ce9fcc3"
 const languageCode = 'en'; // Replace with your agent's language code
-const environment = process.env.REACT_APP_DF_ENVIRONMENT
+// const environment = process.env.REACT_APP_DF_ENVIRONMENT
 
 // Instantiates a session client
 const sessionClient = new dialogflow.SessionsClient({
