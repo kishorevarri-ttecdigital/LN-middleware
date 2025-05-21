@@ -410,7 +410,7 @@ def brainstorm_formatter(data):
     else: # No playbook invocation  
         # Based on multiple examples this is how the split between Header and content is generated from LLM
         # Regex to match the first occurrence of \n\n- ** or \n\n** or \n\n-**
-        split_pattern = r"\n\n-\s\*\*|\n\n\*\*|\n\n-\*\*|\n\n\*\s*\*\*"
+        split_pattern = r"\n\n-\s\*\*|\n\n\*\*|\n\n-\*\*|\n\n\*\s*\*\*|\s*\*\*"
 
         # Split only at the first occurrence
         parts = re.split(split_pattern, cleaned_text, maxsplit=1)
