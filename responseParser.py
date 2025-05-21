@@ -499,7 +499,14 @@ def insights_formatter_main(data):
     # Brainstorm JSON
     if brainstorm_flag:
         # print("Brainstorm")
-        output_json = brainstorm_formatter(data)        
+    # Extract the user utterance
+        user_utterance_text = None
+        for action in actions:
+            if "userUtterance" in action:
+                user_utterance_text = action["userUtterance"].get("text")
+                break
+        if user_utterance_text != "Yes":
+            output_json = brainstorm_formatter(data)           
     # Draft or Brainstorm JSON
     elif not tone_flag:
         # print("Whitepaper Tone buttons")
